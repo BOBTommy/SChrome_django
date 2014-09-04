@@ -8,6 +8,6 @@ urlpatterns = patterns('RESTSChrome.views',
     url(r'^image_book/(?P<pk>[0-9]+)/$', views.ImageBookDetailView.as_view()),
     url(r'^images/$', views.ImageListView.as_view()),
     url(r'^images/(?P<pk>[0-9]+)/$', views.ImageDetailView.as_view()),
-    url(r'^images_text/$', views.ImageTextListView.as_view()),
-    url(r'^images_text/(?P<pk>[0-9]+)/$', views.ImageTextDetailView.as_view()),
+    url(r'^image_text/$', views.ImageTextListView.as_view()),
+    url(r'^image_text/(?P<pk>[0-9]+)/$', views.ImageTextDetailView.as_view()),
 )
