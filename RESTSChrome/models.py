@@ -1,4 +1,5 @@
 from django.db import models
+from django.forms import forms
 
 class User(models.Model):
     user_name = models.CharField(max_length=30)
@@ -42,3 +43,8 @@ class ImageText(models.Model):
 
     def __unicode__(self):
         return "%s's text : %s" % (self.image_name, self.text)
+
+class ImageFile(models.Model):
+    create_date = models.DateTimeField(auto_now_add=True)
+    title = models.CharField(max_length=100)
+    file = models.FileField(upload_to='/Users/riskkim/soma/')
