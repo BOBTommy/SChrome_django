@@ -1,4 +1,4 @@
-from RESTSChrome.models import User,ImageBook,Image,ImageText,ImageFile
+from RESTSChrome.models import User,ImageBook,Image,ImageText,Files
 from rest_framework.serializers import ModelSerializer
 from rest_framework import serializers
 
@@ -23,7 +23,7 @@ class ImageTextSerializer(ModelSerializer):
         model = ImageText
         fields = ('id','image_name','user_name','note_name','text')
 
-class ImageFileSerializer(serializers.ModelSerializer):
+class FilesSerializer(serializers.ModelSerializer):
     class Meta:
-        model = ImageFile
-        fields = ('create_date', 'title', 'file')
+        model = Files
+        fields = ('img_file', 'title')
