@@ -48,3 +48,8 @@ class Files(models.Model):
     created = models.DateTimeField(auto_now_add=True)
     title = models.CharField(max_length=100, default='default_value')
     img_file = models.FileField(upload_to='images/')
+
+class Base64Image(models.Model):
+    img_data = models.TextField()
+    created = models.DateTimeField(auto_now_add=True)
+    img_title = models.CharField(max_length=100)
