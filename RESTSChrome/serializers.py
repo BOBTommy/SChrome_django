@@ -33,4 +33,4 @@ class Base64ImageSerializer(ModelSerializer):
 
     class Meta:
         model = Base64Image
-        fields = ('img_title', 'created')
+        fields = ('img_title', 'created', 'img_data')
